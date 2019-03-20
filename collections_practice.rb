@@ -51,11 +51,13 @@ def find_a(raw_data)
 end
 
 def add_s(raw_data)
-  raw_data.map do |words|
+  new_array = []
+  raw_data.each do |words|
     if words != raw_data[1]
-      words + "s"
+      new_array << words + "s"
     else
-      return words
+      new_array << words
     end
   end
+  new_array
 end
